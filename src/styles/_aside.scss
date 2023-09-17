@@ -1,0 +1,36 @@
+.aside {
+    width: 96px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-secondary-container);
+    padding: 24px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-item {
+            color: var(--color-on-secondary-container);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-text {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+    &__theme {
+        &-button {
+            border: 0;
+            background: none;
+        }
+    }
+}
