@@ -1,4 +1,4 @@
-const themeToggleElement = document.querySelector('#themeToggle')
+const themeToggleElement = document.querySelector('[data-theme-toggle]')
 
 themeToggleElement.addEventListener('click', function () {
     let htmlElement = document.querySelector('html'),

@@ -5,32 +5,72 @@
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: var(--color-secondary-container);
+    background-color: var(--color-primary-container);
     padding: 24px 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     &__menu {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 8px;
         &-item {
-            color: var(--color-on-secondary-container);
+            color: var(--color-on-primary-container);
             text-decoration: none;
             display: flex;
             flex-direction: column;
             align-items: center;
+            &-icon {
+                font-variation-settings: 'GRAD' 0, 'FILL' 0;
+                border-radius: 20px;
+                width: 56px;
+                height: 32px;
+                line-height: 32px;
+                border-radius: 16px;
+                margin: 0 0 8px 0;
+                transition: all 0.5s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             &-text {
                 font-size: 12px;
                 font-weight: 500;
+                font-family: 'Google Sans', Arial, Helvetica, sans-serif;
+            }
+            &:hover {
+                .aside__menu-item-icon {
+                    background-color: var(--color-secondary-container);
+                    & > * {
+                        font-size: 25px;
+                    }
+                }
             }
         }
     }
     &__theme {
+        text-align: center;
         &-button {
             border: 0;
             background: none;
+            cursor: pointer;
+            color: var(--color-on-primary-container);
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: all 0.5s;
+            &:hover {
+                background-color: var(--color-secondary-container);
+                & > * {
+                    font-size: 25px;
+                }
+            }
         }
     }
 }
