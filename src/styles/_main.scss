@@ -1,0 +1,13 @@
+.wrapper {
+    width: calc(100% - 96px);
+    margin: 0 0 0 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main {
+    padding: 24px 0;
+    box-sizing: border-box;
+}

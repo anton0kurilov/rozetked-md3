@@ -24,7 +24,6 @@
             flex-direction: column;
             align-items: center;
             &-icon {
-                font-variation-settings: 'GRAD' 0, 'FILL' 0;
                 border-radius: 20px;
                 width: 56px;
                 height: 32px;
@@ -42,10 +41,11 @@
                 font-family: 'Google Sans', Arial, Helvetica, sans-serif;
             }
             &:hover {
+                background-position: center;
                 .aside__menu-item-icon {
                     background-color: var(--color-secondary-container);
                     & > * {
-                        font-size: 25px;
+                        transform: scale(1.1);
                     }
                 }
             }
@@ -57,14 +57,13 @@
             border: 0;
             background: none;
             cursor: pointer;
-            color: var(--color-on-primary-container);
+            color: var(--color-on-secondary-container);
             width: 56px;
             height: 56px;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            transition: all 0.5s;
             &:hover {
                 background-color: var(--color-secondary-container);
                 & > * {

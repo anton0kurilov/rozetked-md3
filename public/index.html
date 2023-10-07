@@ -31,13 +31,13 @@
                 </a>
                 <a href="#" class="aside__menu-item">
                     <span class="aside__menu-item-icon">
-                        <span class="material-symbols-outlined"> pages</span>
+                        <span class="material-symbols-outlined">pages</span>
                     </span>
                     <span class="aside__menu-item-text">Статьи</span>
                 </a>
                 <a href="#" class="aside__menu-item">
                     <span class="aside__menu-item-icon">
-                        <span class="material-symbols-outlined"> zoom_in</span>
+                        <span class="material-symbols-outlined">zoom_in</span>
                     </span>
                     <span class="aside__menu-item-text">Обзоры</span>
                 </a>
@@ -49,10 +49,31 @@
                 </a>
             </nav>
             <div class="aside__theme">
-                <button class="aside__theme-button" data-theme-toggle>
-                    <span class="material-symbols-outlined"> dark_mode</span>
+                <button
+                    class="aside__theme-button"
+                    data-theme-toggle
+                    role="button"
+                >
+                    <span class="material-symbols-outlined">dark_mode</span>
                 </button>
             </div>
         </aside>
+        <div class="wrapper">
+            <header class="header">
+                <a href="#">
+                    <img
+                        src="../src/images/logo.svg"
+                        alt="На главную страницу"
+                        class="header-logo"
+                        draggable="false"
+                /></a>
+                    <form action="" class="header__search">
+                        <div class="header__search-icon material-symbols-outlined">search</div>
+                        <input type="text" name="search" class="header__search-input" maxlength="100" placeholder="Поиск">
+                    </form>
+                </nav>
+            </header>
+            <main class="main"></main>
+        </div>
     </body>
 </html>
