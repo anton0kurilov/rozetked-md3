@@ -24,6 +24,7 @@
             outline: 0;
             font-size: 18px;
             transition: all 0.5s;
+            font-family: 'Google Sans', Arial, Helvetica, sans-serif;
             &:focus {
                 background-color: var(--color-secondary-container);
                 color: var(--color-on-secondary-container);
