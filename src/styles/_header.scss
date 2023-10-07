@@ -27,6 +27,9 @@
             &:focus {
                 background-color: var(--color-secondary-container);
                 color: var(--color-on-secondary-container);
+                .header__search-icon {
+                    color: var(--color-on-secondary-container);
+                }
             }
             &::placeholder {
                 color: var(--color-on-primary-container);
