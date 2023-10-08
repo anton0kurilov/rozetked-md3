@@ -11,7 +11,7 @@ themeToggleElement.addEventListener('click', function () {
         htmlElement.setAttribute('data-theme', 'dark')
         localStorage.setItem('theme', 'dark')
     } else {
-        htmlElement.setAttribute('data-theme', 'light')
-        localStorage.setItem('theme', 'light')
+        htmlElement.setAttribute('data-theme', 'dark')
+        localStorage.setItem('theme', 'dark')
     }
 })
