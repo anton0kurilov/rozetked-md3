@@ -35,7 +35,7 @@ body {
     --color-on-surface-variant: #eae2cf;
 }
 
-[data-theme='dark'] {
+:root[data-theme='dark'] {
     --color-primary: #e1c54b;
     --color-primary-container: #534600;
     --color-on-primary: #3a3000;
