@@ -18,7 +18,7 @@
             box-sizing: border-box;
             min-width: 300px;
             height: 56px;
-            padding: 0 30px 0 60px;
+            padding: 0 30px 0 62px;
             background-color: var(--color-primary-container);
             color: var(--color-on-primary-container);
             outline: 0;
@@ -28,7 +28,7 @@
             &:focus {
                 background-color: var(--color-secondary-container);
                 color: var(--color-on-secondary-container);
-                .header__search-icon {
+                &::placeholder {
                     color: var(--color-on-secondary-container);
                 }
             }
