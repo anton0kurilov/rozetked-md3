@@ -49,6 +49,12 @@
                     }
                 }
             }
+            &.active {
+                color: var(--color-on-secondary-container);
+                .aside__menu-item-icon {
+                    background-color: var(--color-secondary-container);
+                }
+            }
         }
     }
     &__theme {
