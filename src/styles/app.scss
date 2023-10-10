@@ -16,6 +16,7 @@ body {
     --color-on-primary-container: #221b00;
     --color-secondary: #665e40;
     --color-secondary-container: #eee2bc;
+    --color-secondary-container-rgb: 238, 226, 188;
     --color-on-secondary: #ffffff;
     --color-on-secondary-container: #211b04;
     --color-tertiary: #43664e;
@@ -33,6 +34,9 @@ body {
     --color-on-surface: #1d1b16;
     --color-surface-variant: #4b4739;
     --color-on-surface-variant: #eae2cf;
+
+    --body-width: 1280px;
+    --aside-width: 96px;
 }
 
 :root[data-theme='dark'] {
@@ -42,6 +46,7 @@ body {
     --color-on-primary-container: #ffe264;
     --color-secondary: #d1c6a1;
     --color-secondary-container: #4e472a;
+    --color-secondary-container-rgb: 78, 71, 42;
     --color-on-secondary: #373016;
     --color-on-secondary-container: #eee2bc;
     --color-tertiary: #aad0b3;
@@ -65,7 +70,16 @@ body {
 .main {
     margin: 0 auto;
     width: 100%;
-    max-width: 1440px;
+    max-width: var(--body-width);
+}
+
+.wrapper {
+    width: calc(100% - var(--aside-width));
+    margin: 0 0 0 var(--aside-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 @import '_aside';
