@@ -30,7 +30,7 @@ import 'moment/locale/ru'
                 }</div>`,
                 elementTitle = `<h1 class="home__post-content-title">${item.title}</h1>`
 
-            elementContent += `<div class="home__post">${elementImage}<div class="home__post-content">${elementMeta}</div>${elementTitle}</div></div>`
+            elementContent += `<a href="${item.link}" target="_blank"><div class="home__post">${elementImage}<div class="home__post-content">${elementMeta}</div>${elementTitle}</div></div></a>`
         }
         element.innerHTML = elementContent
         homeElement.appendChild(element)
