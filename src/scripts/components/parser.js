@@ -35,5 +35,8 @@ import 'moment/locale/ru'
         homeElement.appendChild(element)
     } catch (err) {
         console.log(err.name, err.message)
+        errorElement = document.createElement('div')
+        errorElement.innerHTML = `<div class="error"><i class="material-symbols-outlined error-icon">error</i><div class="error-text">Ошибка: ${err.message} <br>Попробуйте позже</div></div>`
+        homeElement.appendChild(errorElement)
     }
 })()
