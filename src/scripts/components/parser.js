@@ -16,8 +16,9 @@ import 'moment/locale/ru'
             element = document.createElement('div'),
             regex = '<img[^>]+src="([^">]+)"',
             elementContent = ''
+        for (let i = 0; i < 10; i++) {
+            let item = feed.items[i]
 
-        feed.items.forEach((item) => {
             let itemImage =
                     item.extendedContent.match(regex)[0] +
                     ' class="home__post-image">',
@@ -29,8 +30,8 @@ import 'moment/locale/ru'
                 }</div>`,
                 elementTitle = `<h1 class="home__post-content-title">${item.title}</h1>`
 
-            elementContent += `<div class="home__post">${elementImage}<div class="home__post-content">${elementMeta}</div>${elementTitle}</div>`
-        })
+            elementContent += `<div class="home__post">${elementImage}<div class="home__post-content">${elementMeta}</div>${elementTitle}</div></div>`
+        }
         element.innerHTML = elementContent
         homeElement.appendChild(element)
     } catch (err) {
