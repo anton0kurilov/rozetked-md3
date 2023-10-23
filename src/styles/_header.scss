@@ -44,7 +44,7 @@
         }
     }
 }
-[data-theme='dark'] {
+:root[data-theme='dark'] {
     .header {
         &-logo {
             filter: invert(100%);

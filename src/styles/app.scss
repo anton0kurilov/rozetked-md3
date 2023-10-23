@@ -67,7 +67,8 @@ body {
 }
 
 .header,
-.main {
+.main,
+.footer {
     margin: 0 auto;
     width: 100%;
     max-width: var(--body-width);
@@ -85,4 +86,5 @@ body {
 @import '_aside';
 @import '_header';
 @import '_main';
+@import '_footer';
 @import '_content';

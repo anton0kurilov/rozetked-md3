@@ -1,0 +1,38 @@
+.footer {
+    height: 96px;
+    padding: 0 60px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    &-logo {
+        width: 100px;
+        height: auto;
+    }
+    &__menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        &-item {
+            color: var(--color-on-background);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: 'Google Sans', Arial, Helvetica, sans-serif;
+            transition: all 0.5s;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+:root[data-theme='dark'] {
+    .footer {
+        &-logo {
+            filter: invert(100%);
+        }
+    }
+}
