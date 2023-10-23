@@ -25,9 +25,11 @@ import 'moment/locale/ru'
                     item.extendedContent.match(regex)[0] +
                     ' class="home__post-image">',
                 elementImage = `<figure>${itemImage}</figure>`,
-                elementMeta = `<div class="home__post-content-info"><div class="home__post-content-time">${moment(
+                elementMeta = `<div class="home__post-content-info"><div class="home__post-content-time" title="${
                     item.pubDate
-                ).format('lll')}</div><div class="home__post-content-type">${
+                }">${moment(
+                    item.pubDate
+                ).fromNow()}</div><div class="home__post-content-type">${
                     item.creator
                 }</div>`,
                 elementTitle = `<h1 class="home__post-content-title">${item.title}</h1>`
