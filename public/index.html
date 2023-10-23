@@ -24,6 +24,13 @@
             rel="stylesheet"
         />
         <script src="../src/scripts/app.js" type="module"></script>
+        <script>
+            function searchOnRozetked() {
+                let searchitem = document.querySelector('#search'),
+                    url = 'https://rozetked.me/search?q=' + searchitem.value
+                window.open(url, '')
+            }
+        </script>
     </head>
     <body>
         <aside class="aside">
@@ -66,13 +73,17 @@
                         class="header-logo"
                         draggable="false"
                 /></a>
-                <form action="" class="header__search">
+                <form
+                    action="javascript:searchOnRozetked()"
+                    class="header__search"
+                >
                     <div class="header__search-icon material-symbols-outlined">
                         search
                     </div>
                     <input
                         type="text"
                         name="search"
+                        id="search"
                         class="header__search-input"
                         maxlength="100"
                         placeholder="Поиск"
