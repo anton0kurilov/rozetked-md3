@@ -15,6 +15,7 @@
         justify-content: flex-start;
         align-items: center;
         gap: 20px;
+        width: 100%;
         &-item {
             color: var(--color-on-background);
             text-decoration: none;
@@ -25,6 +26,13 @@
             &:hover {
                 opacity: 0.8;
             }
+        }
+        &-info {
+            color: var(--color-on-surface);
+            margin-left: auto;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Google Sans', Arial, Helvetica, sans-serif;
         }
     }
 }
