@@ -15,7 +15,9 @@ import 'moment/locale/ru'
         let feed = await parserObj.parseURL(CORS_PROXY + RSS_FEED),
             element = document.createElement('div'),
             regex = '<img[^>]+src="([^">]+)"',
-            elementContent = ''
+            elementContent = '',
+            elementMore =
+                '<div class="home-more">Остальное — на <a href="https://rozetked.me">официальном сайте Rozetked</a></div>'
         for (let i = 0; i < 10; i++) {
             let item = feed.items[i]
 
@@ -32,7 +34,7 @@ import 'moment/locale/ru'
 
             elementContent += `<a href="${item.link}" target="_blank"><div class="home__post">${elementImage}<div class="home__post-content">${elementMeta}</div>${elementTitle}</div></div></a>`
         }
-        element.innerHTML = elementContent
+        element.innerHTML = elementContent + elementMore
         homeElement.appendChild(element)
     } catch (err) {
         console.log(err.name, err.message)
