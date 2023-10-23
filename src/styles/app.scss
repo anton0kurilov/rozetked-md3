@@ -37,6 +37,7 @@ body {
 
     --body-width: 1280px;
     --aside-width: 96px;
+    --main-padding: 60px;
 }
 
 :root[data-theme='dark'] {
@@ -88,3 +89,4 @@ body {
 @import '_main';
 @import '_footer';
 @import '_content';
+@import 'mobile';

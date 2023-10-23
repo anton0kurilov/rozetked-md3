@@ -1,5 +1,5 @@
 .aside {
-    width: 96px;
+    width: var(--aside-width);
     height: 100%;
     position: fixed;
     top: 0;

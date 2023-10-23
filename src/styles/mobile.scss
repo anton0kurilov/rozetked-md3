@@ -1,0 +1,88 @@
+@media screen and (max-width: 1000px) {
+    :root {
+        --main-padding: 20px;
+    }
+    .wrapper {
+        margin: 0 0 var(--aside-width) 0;
+        width: 100%;
+    }
+    .aside {
+        width: 100%;
+        height: calc(var(--aside-width) / 1.2);
+        padding: 0 10px;
+        top: auto;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 999;
+        flex-direction: row;
+        justify-content: space-around;
+        &__menu {
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+        }
+        &__theme {
+            display: none;
+        }
+    }
+    .header {
+        &-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        &__search {
+            width: 56px;
+            &-input {
+                min-width: 56px;
+            }
+        }
+        &__theme {
+            display: block;
+            text-align: center;
+            &-button {
+                border: 0;
+                background: none;
+                cursor: pointer;
+                color: var(--color-on-secondary-container);
+                width: 56px;
+                height: 56px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                &:hover {
+                    background-color: var(--color-secondary-container);
+                    & > * {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    .home {
+        &__post {
+            height: 20vh;
+            margin: 0 0 20px 0;
+            &-image {
+                height: 20vh;
+            }
+            &-content {
+                height: 10vh;
+                margin: -10vh 0 0 0;
+                &-title {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+
+        &__menu-info {
+        }
+    }
+}

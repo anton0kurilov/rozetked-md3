@@ -1,6 +1,6 @@
 .header {
     height: 128px;
-    padding: 0 60px;
+    padding: 0 var(--main-padding);
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -42,6 +42,9 @@
             vertical-align: middle;
             color: var(--color-on-primary-container);
         }
+    }
+    &__theme {
+        display: none;
     }
 }
 :root[data-theme='dark'] {
