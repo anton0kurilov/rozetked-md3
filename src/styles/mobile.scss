@@ -121,9 +121,10 @@
             &-content {
                 height: 200px;
                 padding: 15px;
+                gap: 6px;
                 &-title {
                     font-size: 22px;
-                    line-height: 1;
+                    line-height: 1.1;
                 }
                 &-time,
                 &-type {
