@@ -61,11 +61,9 @@
                 &.active {
                     display: block;
                     position: absolute;
-                    margin: 50px 0 0 0;
                     width: calc(100% - var(--main-padding) * 2);
                     left: var(--main-padding);
                     right: var(--main-padding);
-                    margin: 0 0 100px 0;
                     z-index: 999;
                     & ~ .header__search-icon {
                         display: block !important;
@@ -153,6 +151,33 @@
             &-info {
                 margin: 0;
                 break-before: always;
+            }
+        }
+    }
+}
+@media screen and (max-width: 300px) {
+    :root {
+        --main-padding: 15px;
+    }
+    body {
+        font-size: 14px;
+    }
+    .header {
+        &-logo {
+            width: 100%;
+        }
+    }
+    .home {
+        &__post {
+            &-content {
+                &-title {
+                    font-size: 18px;
+                }
+                &-info {
+                    & > * {
+                        padding: 5px 8px;
+                    }
+                }
             }
         }
     }
