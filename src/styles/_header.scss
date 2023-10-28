@@ -42,6 +42,9 @@
             vertical-align: middle;
             color: var(--color-on-primary-container);
         }
+        &-button {
+            display: none !important;
+        }
     }
     &__theme {
         display: none;
