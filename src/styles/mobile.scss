@@ -1,14 +1,16 @@
 @media screen and (max-width: 1000px) {
     :root {
         --main-padding: 20px;
+        --aside-width: 64px;
     }
     .wrapper {
-        margin: 0 0 calc(var(--aside-width) / 1.4) 0;
+        margin: 0 0 var(--aside-width) 0;
         width: 100%;
     }
     .aside {
         width: 100%;
-        height: calc(var(--aside-width) / 1.4);
+        height: var(--aside-width);
+        border-radius: 10px 10px 0 0;
         padding: 0 10px;
         top: auto;
         left: 0;
@@ -21,6 +23,11 @@
             flex-direction: row;
             justify-content: center;
             gap: 30px;
+            &-item {
+                &-icon {
+                    margin: 0 0 2px;
+                }
+            }
         }
         &__theme {
             display: none;
@@ -134,7 +141,7 @@
         }
     }
     .footer {
-        height: calc(var(--aside-width) / 1.4);
+        height: var(--aside-width);
         flex-direction: column;
         justify-content: space-around;
         gap: 10px;
@@ -142,6 +149,7 @@
         &__menu {
             justify-content: center;
             flex-wrap: wrap;
+            gap: 10px;
             &-info {
                 margin: 0;
                 break-before: always;
