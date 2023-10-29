@@ -42,18 +42,18 @@
             }
             &:hover {
                 background-position: center;
-                color: var(--color-on-secondary-container);
+                color: var(--color-secondary);
                 .aside__menu-item-icon {
-                    background-color: var(--color-secondary-container);
+                    background-color: var(--color-on-secondary);
                     & > * {
                         transform: scale(1.1);
                     }
                 }
             }
             &.active {
-                color: var(--color-on-secondary-container);
+                color: var(--color-secondary);
                 .aside__menu-item-icon {
-                    background-color: var(--color-secondary-container);
+                    background-color: var(--color-on-secondary);
                 }
             }
         }
