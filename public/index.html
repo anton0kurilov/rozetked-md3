@@ -26,9 +26,12 @@
         <script src="../src/scripts/app.js" type="module"></script>
         <script>
             function searchOnRozetked() {
-                let searchitem = document.querySelector('#search'),
-                    url = 'https://rozetked.me/search?q=' + searchitem.value
-                window.open(url, '')
+                const searchElement = document.querySelector('#search')
+                if (searchElement.value == '') {
+                } else {
+                    url = 'https://rozetked.me/search?q=' + searchElement.value
+                    window.open(url, '')
+                }
             }
         </script>
     </head>
@@ -52,6 +55,12 @@
                         <span class="material-symbols-outlined">zoom_in</span>
                     </span>
                     <span class="aside__menu-item-text">Обзоры</span>
+                </a>
+                <a class="aside__menu-item aside-socials" id="aside-socials">
+                    <span class="aside__menu-item-icon">
+                        <span class="material-symbols-outlined">public</span>
+                    </span>
+                    <span class="aside__menu-item-text">Соцсети</span>
                 </a>
             </nav>
             <div class="aside__theme">
@@ -88,6 +97,7 @@
                             name="search"
                             id="search"
                             class="header__search-input"
+                            min="1"
                             maxlength="100"
                             placeholder="Поиск"
                             role="searchbox"
@@ -113,6 +123,52 @@
                     </div>
                 </div>
             </header>
+            <section class="socials">
+                <nav class="socials__list">
+                    <a
+                        href="https://www.youtube.com/user/rozetked"
+                        class="socials__list-item"
+                        style="background-color: #ff0000"
+                        target="_blank"
+                        >YouTube</a
+                    >
+                    <a
+                        href="https://t.me/rozetked"
+                        class="socials__list-item"
+                        style="background-color: #0088cc"
+                        target="_blank"
+                        >Telegram</a
+                    >
+                    <a
+                        href="https://twitter.com/rozetked"
+                        class="socials__list-item"
+                        style="background-color: #1da1f2"
+                        target="_blank"
+                        >Twitter</a
+                    >
+                    <a
+                        href="https://dzen.ru/rozetked"
+                        class="socials__list-item"
+                        style="background-color: #ffcc00"
+                        target="_blank"
+                        >Дзен</a
+                    >
+                </nav>
+                <a target="_blank" id="youtube-link">
+                    <div class="socials__youtube">
+                        <div
+                            class="socials__youtube-image"
+                            id="youtube-image"
+                        ></div>
+                        <div class="socials__youtube-content">
+                            <h1
+                                class="socials__youtube-content-title"
+                                id="youtube-title"
+                            ></h1>
+                        </div>
+                    </div>
+                </a>
+            </section>
             <main class="main home"></main>
             <footer class="footer">
                 <a href="#">

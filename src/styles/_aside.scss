@@ -71,6 +71,7 @@
             justify-content: center;
             align-items: center;
             border-radius: 50%;
+            transition: all 0.5s;
             &:hover {
                 background-color: var(--color-on-secondary);
                 color: var(--color-primary);
@@ -79,5 +80,8 @@
                 }
             }
         }
+    }
+    &-socials {
+        display: none;
     }
 }
