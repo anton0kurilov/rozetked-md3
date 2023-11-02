@@ -8,12 +8,12 @@ searchToggleElement.addEventListener('click', function () {
     let overlayElement = document.createElement('div')
     overlayElement.classList.add('overlay')
     document.querySelector('body').appendChild(overlayElement)
-    searchInputElement.classList.add('active')
+    searchFormElement.classList.add('active')
     searchInputElement.focus()
     let overlayAddedElement = document.querySelector('.overlay')
     overlayAddedElement.addEventListener('click', function () {
         overlayAddedElement.remove()
-        searchInputElement.classList.remove('active')
+        searchFormElement.classList.remove('active')
     })
 })
 

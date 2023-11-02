@@ -62,21 +62,26 @@
         &__search {
             &-input {
                 display: none;
-                &.active {
+                position: relative;
+            }
+            &.active {
+                & .header__search-input {
                     display: block;
                     position: absolute;
                     width: calc(100% - var(--main-padding) * 2);
                     left: var(--main-padding);
                     right: var(--main-padding);
                     z-index: 999;
-                    & ~ .header__search-icon {
-                        display: block !important;
-                        left: 10px;
-                    }
+                }
+                & .header__search-icon {
+                    display: block !important;
+                    left: 20px;
+                    z-index: 1000;
                 }
             }
+            .material-symbols-outlined,
             &-icon {
-                display: none !important;
+                display: none;
             }
             &-button {
                 border: 0;
