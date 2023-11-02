@@ -44,4 +44,10 @@ import 'moment/locale/ru'
         errorElement.innerHTML = `<div class="error"><i class="material-symbols-outlined error-icon">error</i><div class="error-text">Ошибка: ${err.message} <br>Попробуйте позже</div></div>`
         homeElement.appendChild(errorElement)
     }
+    return isLoaded()
 })()
+
+function isLoaded() {
+    const loaderElement = document.querySelector('.loading')
+    loaderElement.remove()
+}
