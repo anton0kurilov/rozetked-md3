@@ -2,6 +2,8 @@ const searchToggleElement = document.querySelector('[data-search-toggle]'),
     searchInputElement = document.querySelector('.header__search-input'),
     searchFormElement = document.querySelector('#search-form')
 
+let url = ''
+
 searchToggleElement.addEventListener('click', function () {
     let overlayElement = document.createElement('div')
     overlayElement.classList.add('overlay')
@@ -20,7 +22,7 @@ searchFormElement.addEventListener('submit', function (e) {
     const searchElement = document.querySelector('#search')
     if (searchElement.value == '') {
     } else {
-        url = 'https://rozetked.me/search?q=' + searchElement.value
+        let url = 'https://rozetked.me/search?q=' + searchElement.value
         window.open(url, '')
     }
 })
