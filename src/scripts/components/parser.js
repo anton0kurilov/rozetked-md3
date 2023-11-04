@@ -33,7 +33,6 @@ import 'moment/locale/ru'
                     item.creator
                 }</div>`,
                 elementTitle = `<h1 class="home__post-content-title">${item.title}</h1>`
-            elementBody = `${item.extendedContent}`
 
             elementContent += `<div class="home__post" id="${i}">${elementImage}<div class="home__post-content">${elementMeta}</div>${elementTitle}</div></div>`
         }
