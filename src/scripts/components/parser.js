@@ -33,11 +33,63 @@ import 'moment/locale/ru'
                     item.creator
                 }</div>`,
                 elementTitle = `<h1 class="home__post-content-title">${item.title}</h1>`
+            elementBody = `${item.extendedContent}`
 
-            elementContent += `<a href="${item.link}" target="_blank"><div class="home__post">${elementImage}<div class="home__post-content">${elementMeta}</div>${elementTitle}</div></div></a>`
+            elementContent += `<div class="home__post" id="${i}">${elementImage}<div class="home__post-content">${elementMeta}</div>${elementTitle}</div></div>`
         }
         element.innerHTML = elementContent + elementMore
         homeElement.appendChild(element)
+
+        const postsElements = document.querySelectorAll('.home__post')
+
+        postsElements.forEach(function (element) {
+            element.addEventListener('click', function () {
+                let link = element.id,
+                    post = document.createElement('div'),
+                    postAll = `<a href="${feed.items[link].link}" target="_blank"><div class="post__item-read">Прочитать в оригинале</div></a>`,
+                    postClose =
+                        '<div class="post__item-close" id="post-close"></div>',
+                    snippet = document.createElement('div'),
+                    desc = document.createElement('p')
+                snippet.classList.add('post__item-snippet')
+                snippet.innerHTML =
+                    'Автор: ' +
+                    feed.items[link].creator +
+                    ' Дата: ' +
+                    moment(feed.items[link].pubDate).format('LLL')
+                desc.classList.add('post__item-desc')
+                desc.innerHTML = feed.items[link].contentSnippet
+                post.classList.add('post__item')
+                post.innerHTML =
+                    feed.items[link].extendedContent + postAll + postClose
+
+                homeElement.appendChild(post)
+                let postHeaderElement =
+                        document.querySelector('.post__item header'),
+                    postImageElement = document.querySelector(
+                        '.post__item header figure'
+                    )
+                postHeaderElement.appendChild(snippet)
+
+                postHeaderElement.insertBefore(desc, postImageElement)
+                let overlayElement = document.createElement('div')
+                overlayElement.classList.add('overlay')
+                document.querySelector('body').appendChild(overlayElement)
+
+                let overlayAddedElement = document.querySelector('.overlay'),
+                    closeButton = document.querySelector('#post-close')
+                overlayAddedElement.addEventListener('click', function () {
+                    overlayAddedElement.remove()
+                    closeButton.remove()
+                    post.remove()
+                })
+                closeButton.addEventListener('click', function () {
+                    overlayAddedElement.remove()
+                    closeButton.remove()
+                    post.remove()
+                })
+            })
+        })
     } catch (err) {
         console.log(err.name, err.message)
         let errorElement = document.createElement('div')
