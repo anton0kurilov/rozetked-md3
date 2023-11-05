@@ -6,7 +6,7 @@
             "src": "./app.svg",
             "type": "image/svg+xml",
             "sizes": "any",
-            "purpose": "any maskable"
+            "purpose": "any"
         }
     ],
     "start_url": "https://rozetked.vercel.app",
@@ -18,5 +18,12 @@
     "dir": "auto",
     "categories": [
         "news"
+    ],
+    "screenshots": [
+        {
+            "sizes": "720x1467",
+            "src": "./screenshot.jpg",
+            "type": "image/png"
+        }
     ]
 }
