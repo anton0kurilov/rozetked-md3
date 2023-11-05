@@ -51,11 +51,11 @@ import 'moment/locale/ru'
                     snippet = document.createElement('div'),
                     desc = document.createElement('p')
                 snippet.classList.add('post__item-snippet')
-                snippet.innerHTML =
-                    'Автор: ' +
-                    feed.items[link].creator +
-                    ' Дата: ' +
-                    moment(feed.items[link].pubDate).format('LLL')
+                snippet.innerHTML = `Написал <b>${
+                    feed.items[link].creator
+                }</b> в <b>${moment(feed.items[link].pubDate).format(
+                    'LT D MMMM'
+                )}</b>`
                 desc.classList.add('post__item-desc')
                 desc.innerHTML = feed.items[link].contentSnippet
                 post.classList.add('post__item')
