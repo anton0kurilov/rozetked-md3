@@ -51,19 +51,16 @@ import 'moment/locale/ru'
             element.addEventListener('click', function () {
                 let link = element.id,
                     post = document.createElement('div'),
-                    postAll = `<a href="${feed.items[link].link}" target="_blank"><div class="post__item-read">Прочитать в оригинале</div></a>`,
+                    postAll = `<div class="post__item-footer"><div class="post__item-snippet">Написал <b>${
+                        feed.items[link].creator
+                    }</b> в <b>${moment(feed.items[link].pubDate).format(
+                        'LT D MMMM'
+                    )}</b></div><a href="${
+                        feed.items[link].link
+                    }" target="_blank"><div class="post__item-read">Прочитать в оригинале <i class="material-symbols-outlined post__item-read-icon">arrow_forward</i></div></a></div>`,
                     postClose =
-                        '<div class="post__item-close" id="post-close"></div>',
-                    snippet = document.createElement('div'),
+                        '<button class="post__item-close" id="post-close" role="button">',
                     desc = document.createElement('p')
-
-                // post snippet configuration
-                snippet.classList.add('post__item-snippet')
-                snippet.innerHTML = `Написал <b>${
-                    feed.items[link].creator
-                }</b> в <b>${moment(feed.items[link].pubDate).format(
-                    'LT D MMMM'
-                )}</b>`
 
                 // post intro configuration
                 desc.classList.add('post__item-desc')
@@ -81,7 +78,6 @@ import 'moment/locale/ru'
                     postImageElement = document.querySelector(
                         '.post__item header figure'
                     )
-                postHeaderElement.appendChild(snippet)
                 postHeaderElement.insertBefore(desc, postImageElement)
 
                 // post overlay creating
