@@ -19,7 +19,7 @@ import 'moment/locale/ru'
             regex = '<img[^>]+src="([^">]+)"',
             elementContent = '',
             elementMore =
-                '<div class="home-more">Остальное — на <a href="https://rozetked.me">официальном сайте Rozetked</a></div>'
+                '<a href="https://rozetked.me"><div class="home-more">Остальное — на официальном сайте Rozetked <i class="material-symbols-outlined home-more-icon">arrow_forward</i></div></a>'
 
         // only ten latest posts (for now)
         for (let i = 0; i < 10; i++) {
