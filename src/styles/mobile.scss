@@ -163,8 +163,22 @@
         &__item {
             top: 20px;
             padding: 20px;
-            header {
-                font-size: 0.7em;
+            max-width: calc(100% - var(--main-padding) * 2);
+            max-height: calc(100% - 40px);
+            header h1 {
+                font-size: 1.3em;
+                line-height: 1.1;
+            }
+            &-close {
+                top: 15px;
+                right: 15px;
+                width: 35px;
+                height: 35px;
+            }
+            &-footer {
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: 1fr;
+                gap: 10px;
             }
         }
     }

@@ -1,0 +1,29 @@
+{
+    "short_name": "ReRozetked",
+    "name": "ReRozetked",
+    "icons": [
+        {
+            "src": "./app.svg",
+            "type": "image/svg+xml",
+            "sizes": "any",
+            "purpose": "any"
+        }
+    ],
+    "start_url": "https://rozetked.vercel.app",
+    "background_color": "#000",
+    "display": "standalone",
+    "lang": "ru-RU",
+    "orientation": "portrait-primary",
+    "theme_color": "#000000",
+    "dir": "auto",
+    "categories": [
+        "news"
+    ],
+    "screenshots": [
+        {
+            "sizes": "720x1467",
+            "src": "./screenshot.jpg",
+            "type": "image/png"
+        }
+    ]
+}
