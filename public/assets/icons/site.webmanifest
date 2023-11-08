@@ -6,7 +6,7 @@
             "src": "./app.svg",
             "type": "image/svg+xml",
             "sizes": "any",
-            "purpose": "any"
+            "purpose": "any maskable"
         }
     ],
     "start_url": "https://rozetked.vercel.app",
