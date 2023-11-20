@@ -83,6 +83,7 @@ import 'moment/locale/ru'
                 // post overlay creating
                 let overlayElement = document.createElement('div')
                 overlayElement.classList.add('overlay')
+                document.querySelector('body').style.overflow = 'hidden'
                 document.querySelector('body').appendChild(overlayElement)
 
                 // post and overlay removing
@@ -91,11 +92,13 @@ import 'moment/locale/ru'
                 overlayAddedElement.addEventListener('click', function () {
                     overlayAddedElement.remove()
                     closeButton.remove()
+                    document.querySelector('body').style.overflow = 'auto'
                     post.remove()
                 })
                 closeButton.addEventListener('click', function () {
                     overlayAddedElement.remove()
                     closeButton.remove()
+                    document.querySelector('body').style.overflow = 'auto'
                     post.remove()
                 })
             })
