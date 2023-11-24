@@ -113,7 +113,7 @@ import 'moment/locale/ru'
     return isLoaded()
 })()
 
-// overlay hiding
+// loader hiding
 function isLoaded() {
     const loaderElement = document.querySelector('.loading')
     loaderElement.remove()
