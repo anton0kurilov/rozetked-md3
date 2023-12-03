@@ -87,10 +87,19 @@ import 'moment/locale/ru'
                 document.querySelector('body').appendChild(overlayElement)
 
                 // post and overlay removing
-                let overlayAddedElement = document.querySelector('.overlay'),
-                    closeButton = document.querySelector('#post-close')
-                overlayAddedElement.addEventListener('click', hidePost())
-                closeButton.addEventListener('click', hidePost())
+                let closeButton = document.querySelector('#post-close')
+                overlayElement.addEventListener('click', function () {
+                    overlayElement.remove()
+                    closeButton.remove()
+                    document.querySelector('body').style.overflow = 'auto'
+                    post.remove()
+                })
+                closeButton.addEventListener('click', function () {
+                    overlayElement.remove()
+                    closeButton.remove()
+                    document.querySelector('body').style.overflow = 'auto'
+                    post.remove()
+                })
             })
         })
     } catch (err) {
@@ -107,12 +116,4 @@ import 'moment/locale/ru'
 function isLoaded() {
     const loaderElement = document.querySelector('.loading')
     loaderElement.remove()
-}
-
-// post hiding
-function hidePost() {
-    overlayAddedElement.remove()
-    closeButton.remove()
-    document.querySelector('body').style.overflow = 'auto'
-    post.remove()
 }
