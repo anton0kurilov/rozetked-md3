@@ -165,7 +165,7 @@
         &__item {
             top: 20px;
             padding: 20px;
-            max-width: calc(100% - var(--main-padding) * 2);
+            width: calc(100% - var(--main-padding) * 2);
             max-height: calc(100% - 40px);
             header h1 {
                 font-size: 1.3em;

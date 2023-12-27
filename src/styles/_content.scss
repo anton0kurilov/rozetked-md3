@@ -118,6 +118,7 @@
         z-index: 1002;
         top: 50px;
         max-width: calc(var(--body-width) - var(--main-padding) * 2);
+        width: calc(100% - var(--aside-width) - var(--main-padding) * 2);
         max-height: calc(100% - 100px);
         height: auto;
         box-sizing: border-box;
