@@ -86,6 +86,21 @@ import 'moment/locale/ru'
                 document.querySelector('body').style.overflow = 'hidden'
                 document.querySelector('body').appendChild(overlayElement)
 
+                document.onkeydown = function (evt) {
+                    let isEscape = false
+                    if ('key' in evt) {
+                        isEscape = evt.key === 'Escape' || evt.key === 'Esc'
+                    } else {
+                        isEscape = evt.keyCode === 27
+                    }
+                    if (isEscape) {
+                        overlayElement.remove()
+                        closeButton.remove()
+                        document.querySelector('body').style.overflow = 'auto'
+                        post.remove()
+                    }
+                }
+
                 // post and overlay removing
                 let closeButton = document.querySelector('#post-close')
                 overlayElement.addEventListener('click', function () {
