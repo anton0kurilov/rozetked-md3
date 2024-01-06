@@ -51,7 +51,7 @@ import 'moment/locale/ru'
             element.addEventListener('click', function () {
                 let link = element.id,
                     post = document.createElement('div'),
-                    postAll = `<div class="post__item-footer"><div class="post__item-snippet">Написал <b>${
+                    postAll = `<div class="post__item-footer"><div class="post__item-snippet"><b>${
                         feed.items[link].creator
                     }</b> в <b>${moment(feed.items[link].pubDate).format(
                         'LT D MMMM'
