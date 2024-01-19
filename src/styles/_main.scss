@@ -34,6 +34,7 @@
     width: 80%;
     max-width: 800px;
     height: 5px;
+    border-radius: 20px;
     overflow-x: hidden;
 }
 
@@ -41,6 +42,7 @@
     position: absolute;
     opacity: 0.4;
     background: var(--color-primary);
+    border-radius: 20px;
     width: 150%;
     height: 5px;
 }
@@ -48,6 +50,7 @@
 .subline {
     position: absolute;
     background: var(--color-primary);
+    border-radius: 20px;
     height: 5px;
 }
 .increase {
