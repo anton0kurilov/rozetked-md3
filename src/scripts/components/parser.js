@@ -51,7 +51,7 @@ import 'moment/locale/ru'
             element.addEventListener('click', function () {
                 let link = element.id,
                     post = document.createElement('div'),
-                    postAll = `<div class="post__item-footer"><div class="post__item-snippet">Написал <b>${
+                    postAll = `<div class="post__item-footer"><div class="post__item-snippet"><b>${
                         feed.items[link].creator
                     }</b> в <b>${moment(feed.items[link].pubDate).format(
                         'LT D MMMM'
@@ -85,6 +85,21 @@ import 'moment/locale/ru'
                 overlayElement.classList.add('overlay')
                 document.querySelector('body').style.overflow = 'hidden'
                 document.querySelector('body').appendChild(overlayElement)
+
+                document.onkeydown = function (evt) {
+                    let isEscape = false
+                    if ('key' in evt) {
+                        isEscape = evt.key === 'Escape' || evt.key === 'Esc'
+                    } else {
+                        isEscape = evt.keyCode === 27
+                    }
+                    if (isEscape) {
+                        overlayElement.remove()
+                        closeButton.remove()
+                        document.querySelector('body').style.overflow = 'auto'
+                        post.remove()
+                    }
+                }
 
                 // post and overlay removing
                 let closeButton = document.querySelector('#post-close')
